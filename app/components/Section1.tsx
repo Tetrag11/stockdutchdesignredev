@@ -56,6 +56,8 @@ export default function Section1() {
     };
 
     const handleMouseEnter = (event: any) => {
+      console.log("entered");
+
       setMouseEnter(true);
     };
 
@@ -70,12 +72,11 @@ export default function Section1() {
     };
     setMainHeight(container.current.offsetHeight + hero2.current.offsetHeight);
 
-    container.current &&
-      document.body.addEventListener("mousemove", handleMouseMove);
-    container.current &&
-      document.body.addEventListener("mouseleave", handleMouseExit);
-    container.current &&
-      document.body.addEventListener("mouseenter", handleMouseEnter);
+    document.body.addEventListener("mousemove", handleMouseMove);
+
+    document.body.addEventListener("mouseleave", handleMouseExit);
+
+    document.body.addEventListener("mouseenter", handleMouseEnter);
 
     left.current &&
       left.current.addEventListener("mouseover", handleMouseOverLeft);
@@ -114,7 +115,7 @@ export default function Section1() {
 
         {/* left */}
         <animated.div
-          style={mouseEnter && !mouseExit ? moveTarget : stayTarget}
+          style={!mouseExit ? moveTarget : stayTarget}
           ref={target}
           className="absolute z-0 top-[31vh] left-[11vw] w-[23.5%] hidden sm:block  pb-[33%] "
         >
@@ -140,7 +141,7 @@ export default function Section1() {
           />
         </animated.div>
         <animated.div
-          style={mouseEnter && !mouseExit ? moveTarget : stayTarget}
+          style={!mouseExit ? moveTarget : stayTarget}
           ref={target}
           className="absolute z-[3] top-[70vh] left-[10vw] w-[12%] bg-white  pb-[16%] hidden sm:block"
         >
@@ -166,7 +167,7 @@ export default function Section1() {
           />
         </animated.div>
         <animated.div
-          style={mouseEnter && !mouseExit ? moveTarget : stayTarget}
+          style={!mouseExit ? moveTarget : stayTarget}
           ref={target}
           className="absolute z-[2] top-[50vh] left-[2vw] w-[14%] bg-orange-300  pb-[22%] hidden sm:block"
         >
@@ -183,7 +184,7 @@ export default function Section1() {
 
         {/* right*/}
         <animated.div
-          style={mouseEnter && !mouseExit ? moveTarget2 : stayTarget}
+          style={!mouseExit ? moveTarget2 : stayTarget}
           ref={target2}
           className="absolute z-0 top-[13vh] right-[24vw] w-[16.66%] pb-[26%] sm:block hidden"
         >
@@ -209,7 +210,7 @@ export default function Section1() {
           />
         </animated.div>
         <animated.div
-          style={mouseEnter && !mouseExit ? moveTarget2 : stayTarget}
+          style={!mouseExit ? moveTarget2 : stayTarget}
           ref={target2}
           className="absolute z-[2] top-[31vh] right-[18vw] w-[14.5%] bg-orange-300  pb-[22%] hidden sm:block"
         >
@@ -224,7 +225,7 @@ export default function Section1() {
           />
         </animated.div>
         <animated.div
-          style={mouseEnter && !mouseExit ? moveTarget2 : stayTarget}
+          style={!mouseExit ? moveTarget2 : stayTarget}
           ref={target2}
           className="absolute z-[3] top-[55vh] right-[23vw] w-[12%] bg-white  pb-[16%] hidden sm:block "
         >
@@ -277,7 +278,7 @@ export default function Section1() {
         </div>
         {/* circle */}
         <animated.div
-          style={mouseEnter && !mouseExit ? moveTarget2 : stayTarget}
+          style={!mouseExit ? moveTarget2 : stayTarget}
           ref={target2}
           className="absolute z-[3]   top-[41vh] left-[28vw] w-[26%] opacity-20 rounded-[50%] border-2 border-white  pb-[26%] hidden sm:block "
         ></animated.div>
@@ -307,7 +308,7 @@ export default function Section1() {
   /* 
 
 <animated.div
-style={mouseEnter && !mouseExit ? moveTarget2 : stayTarget}
+style={!mouseExit ? moveTarget2 : stayTarget}
 ref={target2}
 className="absolute left-[10%] sm:w-[300px] w-[200px] sm:h-[400px] h-[300px] bg-black border-2 border-black top-0  "
 ></animated.div> */
