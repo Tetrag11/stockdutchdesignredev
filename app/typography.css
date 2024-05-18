@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+.source-sans {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+}
+
+.noto {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.f-heading-xxl {
+  font-size: 10.66vw !important;
+  line-height: 10.66vw;
+  font-family: "Noto Serif", serif;
+}
+
+.f-heading-xxl-web {
+  font-size: 6.63vw !important;
+  line-height: 5.59vw;
+  font-family: "Noto Serif", serif;
+  font-weight: 300;
+}
+
+.f-chapeau-web {
+  width: auto;
+  font-size: 0.87vw;
+  line-height: 1.84vw;
+  letter-spacing: 0.62vw;
+  font-weight: 600;
+}
+
+.f-chapeau {
+  width: auto;
+  font-size: 3.73vw;
+  line-height: 6.66vw;
+  letter-spacing: 2.26vw;
+}
+
+.f-blockquote-m {
+  font-family: "Noto Serif", serif;
+  color: white;
+  font-size: 4.86vw;
+  line-height: 8.53vw;
+  letter-spacing: 0.13vw;
+}
+.f-blockquote-web {
+  font-size: 2.77vw;
+  line-height: 3.47vw;
+  letter-spacing: 0.06vw;
+}
+
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -60px 0 0 -60px;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
